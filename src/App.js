@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header';
+import Typical from 'react-typical'
+import Cards from './components/Cards';
+// import Aos from 'aos';
+// import "aos/dist/aos.css"
+import { useEffect } from 'react';
 function App() {
+  // useEffect(()=>{
+  //   Aos.init({})
+  // },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="app">
+        <Header />
+        <div className="homePageText">
+               <h1>Namaste India</h1>
+               <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
+               <h4>Visit
+                 <Typical 
+                  steps={["Agra","Jaipur","Kerala","Kolkata"]}
+                  loop={Infinity}
+                  className="typist"
+                  />
+               </h4>
+        </div>
     </div>
+         <Cards />
+
+    </>
   );
 }
 
