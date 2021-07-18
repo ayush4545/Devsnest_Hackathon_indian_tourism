@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import Typical from 'react-typical'
 import Cards from './components/Cards';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 // import Aos from 'aos';
 // import "aos/dist/aos.css"
 import { useEffect } from 'react';
@@ -26,6 +28,8 @@ function App() {
         </div>
     </div>
          <Cards />
+         <ContactUs />
+         <Footer />
 
     </>
   );

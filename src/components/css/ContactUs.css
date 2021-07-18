@@ -1,0 +1,13 @@
+.Container{
+padding: 0 5rem;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem;
+}
+
+.office{
+    
+}
