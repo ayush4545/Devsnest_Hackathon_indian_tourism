@@ -4,6 +4,7 @@ import Typical from 'react-typical'
 import Cards from './components/Cards';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+import Fade from 'react-reveal/Fade';
 // import Aos from 'aos';
 // import "aos/dist/aos.css"
 import { useEffect } from 'react';
@@ -15,7 +16,7 @@ function App() {
     <>
     <div className="app">
         <Header />
-        <div className="homePageText">
+        <div className="homePageText" id="home">
                <h1>Namaste India</h1>
                <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
                <h4>Visit
@@ -28,8 +29,11 @@ function App() {
         </div>
     </div>
          <Cards />
-         <ContactUs />
-         <Footer />
+         
+         <Fade bottom>
+              <ContactUs />
+              <Footer />
+         </Fade>
 
     </>
   );

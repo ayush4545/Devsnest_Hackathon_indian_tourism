@@ -3,7 +3,7 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
+  /* overflow-x:scroll */
 }
 
 html{
@@ -27,6 +27,7 @@ html{
    color:white;
    font-family: "Rancho";
    text-shadow: -1px 3px 3px rgba(0,0,0,0.6);
+   position: absolute;
 }
 
 .homePageText h1{
@@ -39,14 +40,20 @@ html{
   font-size: 5rem;
   letter-spacing: 0.3rem;
   margin-bottom: 1rem;
+  margin-left: 4rem;
 }
 
 .homePageText h4{
    font-size: 4rem;
    letter-spacing: 1rem;
+ 
 }
 .typist{
   font-size: 6rem;
   color:white;
   margin-top: 1rem;
+}
+
+::-webkit-scrollbar-button{
+  display: none;
 }
