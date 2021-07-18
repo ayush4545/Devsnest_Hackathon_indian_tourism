@@ -21,7 +21,7 @@ function Cards() {
 
   console.log()
   return (
-    <Container>
+    <Container id="card">
       <h1 className="h1">Popular In India</h1>
       <p className="p">India is a home to the finest architectural heritage, serene ghats, spectacular landscapes and largest tiger reserve</p>
       <CardWrapper>
@@ -71,7 +71,7 @@ function Cards() {
 
 
 const Container = styled.div`
- width:100vw;
+ width:99vw;
  height:auto;
  /* min-height:40vh; */
 text-align:center;
