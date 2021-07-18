@@ -8,7 +8,7 @@ function Header() {
              </Wrapper>
              <LinksWrapper>
                   <a href>HOME</a>
-                  <a href>CONTACT</a>
+                  <a href="#contact">CONTACT</a>
                   <a href>ABOUT US</a>
              </LinksWrapper>
         </Container>

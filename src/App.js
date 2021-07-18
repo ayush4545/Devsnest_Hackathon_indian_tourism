@@ -26,10 +26,20 @@ function App() {
                   />
                </h4>
         </div>
+        <div id="cards">
+              <Cards />
+         </div>
+         <div id="aboutus">
+          
+         </div>
+         <div id="contact">
+            <ContactUs />
+         </div>
+         <div id="footer">
+            <Footer />
+         </div>
     </div>
-         <Cards />
-         <ContactUs />
-         <Footer />
+         
 
     </>
   );
