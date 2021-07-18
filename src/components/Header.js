@@ -7,9 +7,9 @@ function Header() {
                 <a href=""><img src="https://cdn.discordapp.com/attachments/845771359643762770/866032368900243457/second.png"/></a>
              </Wrapper>
              <LinksWrapper>
-                  <a href>HOME</a>
+                  <a href="#home">HOME</a>
                   <a href="#contact">CONTACT</a>
-                  <a href="#aboutus">ABOUT US</a>
+                  <a href="#about">ABOUT US</a>
              </LinksWrapper>
         </Container>
             
@@ -19,15 +19,17 @@ function Header() {
 
 
 const Container=styled.div`
- width:100vw;
+ width:98vw;
  height:10vh;
  display:flex;
  align-items:center;
  justify-content:space-between;
  padding:0.5rem;
- background-color:rgba(0,0,0,0.2)
- 
-
+ background-color:rgba(0,0,0,0.4);
+ position:fixed;
+ top:0;
+ z-index:10000;
+ margin-left:5px;
 `
 
 const Wrapper=styled.div`
