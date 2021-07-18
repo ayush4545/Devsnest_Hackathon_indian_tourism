@@ -1,0 +1,28 @@
+
+.mem-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    height: 350px;
+    width: 290px;
+    border-radius: 35px;
+    margin: 20px;
+    background-color: rgb(198, 231, 227);
+}
+
+.mem-card img{
+    height: 150px;
+    width: 150px;
+}
+
+.mem-card h2{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 30px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}

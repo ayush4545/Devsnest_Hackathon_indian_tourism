@@ -4,6 +4,7 @@ import Typical from 'react-typical'
 import Cards from './components/Cards';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+import Aboutus from './components/Aboutus';
 // import Aos from 'aos';
 // import "aos/dist/aos.css"
 import { useEffect } from 'react';
@@ -30,7 +31,7 @@ function App() {
               <Cards />
          </div>
          <div id="aboutus">
-          
+          <Aboutus/>
          </div>
          <div id="contact">
             <ContactUs />
