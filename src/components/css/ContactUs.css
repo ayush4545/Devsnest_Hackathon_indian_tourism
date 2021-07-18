@@ -1,0 +1,14 @@
+.Container{
+padding: 0 5rem;
+background-color: rgba(0, 0, 0, 0.596);   
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem;
+}
+
+.office{
+    
+}

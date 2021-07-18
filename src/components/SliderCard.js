@@ -3,6 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import Fade from 'react-reveal/Fade';
 import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
 import './css/Card.css'
+
 function SliderCard({ img, city, history }) {
     const [classNames,setClassName]=useState('hide')
     return (
