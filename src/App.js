@@ -18,7 +18,7 @@ function App() {
                <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
                <h4>Visit
                  <Typical 
-                  steps={["Agra","Jaipur","Kerala","Kolkata"]}
+                  steps={["Agra",1000,"Jaipur",1000,"Kerala",1000,"Kolkata",1000]}
                   loop={Infinity}
                   className="typist"
                   />
