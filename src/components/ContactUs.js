@@ -17,8 +17,8 @@ function ContactUs() {
     )
 
     function handleChange(e){
-        
-        setdata( { [e.target.name]:e.target.value});
+
+        setdata( {...data, [e.target.name]:e.target.value});
         e.preventDefault();
 
     }
@@ -49,6 +49,7 @@ function ContactUs() {
                 </div>
                     <form onSubmit={handleSubmit}>
                     <h2>Query Form</h2>
+
                     <label> Fullname</label> <br/>
                     <input type="text"  name="fullname" value={data.fullname} onChange={handleChange} required/><br/>
 

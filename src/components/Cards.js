@@ -2,25 +2,75 @@ import React, { useEffect, useState } from 'react'
 import Card from "./Card"
 import styled from 'styled-components'
 import data from '../data'
-function Cards() {
-    const [cities,setCities]=useState(data)
-    console.log(cities)
-    return (
-        <Container>
-            <h1 className="h1">Popular In India</h1>
-            <p className="p">India is a home to the finest architectural heritage, serene ghats, spectacular landscapes and largest tiger reserve</p>
-            <CardWrapper>
+import SliderCard from './SliderCard'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+// import 'swiper/components/scrollbar/scrollbar.scss';
+import "swiper/components/effect-coverflow/effect-coverflow.min.css"
 
-              {cities.map((city,index)=>{
-                 return <Card key={index} img={city.image} city={city.city} history={city.history}/>
+
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from 'swiper/core';
+
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+function Cards() {
+  const [cities, setCities] = useState(data)
+
+  const [cardCitie, setCardCitie] = useState(cities.splice(0, 6))
+
+  console.log()
+  return (
+    <Container>
+      <h1 className="h1">Popular In India</h1>
+      <p className="p">India is a home to the finest architectural heritage, serene ghats, spectacular landscapes and largest tiger reserve</p>
+      <CardWrapper>
+        {cardCitie.map((city, index) => {
+          return <Card key={index} img={city.image} city={city.city} history={city.history} />
+        })}
+      </CardWrapper>
+
+      <div className="crousel-card">
+        <h1>Must Visit Destinations</h1>
+        <p>From historical cities to natural splendours, come see the best of India, Dive deeper into India's rich culture and heritage</p>
+        <Swiper
+          navigation={true}
+          effect={"coverflow"}
+          centeredSlides={true}
+          slidesPerView={window.innerWidth < 768 ? 1 : 3}
+          loop={true}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+          }}
+
+          pagination={{
+            clickable: true
+          }}
+          className="myswiper"
+        >
+          <SlideWrapper>
+          
+              {cities.map((city, index) => {
+                return ( <SwiperSlide>
+                                  <SliderCard key={index} img={city.image} city={city.city} history={city.history} />  
+                                  
+                         </SwiperSlide>
+                         )
               })}
-            </CardWrapper>
-        </Container>
-    )
+
+          </SlideWrapper>
+        </Swiper>
+      </div>
+    </Container>
+  )
 }
 
 
-const Container =styled.div`
+const Container = styled.div`
  width:100vw;
  height:auto;
  /* min-height:40vh; */
@@ -38,6 +88,7 @@ padding:5rem;
     margin-bottom:2rem;
     font-size:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.4);
+    letter-spacing:1rem;
 }
   
  .p{
@@ -46,14 +97,122 @@ padding:5rem;
     font-size:3rem;
     color:#334257;
     width:50%;
-    margin-left:35rem;
+    margin-left:30rem;
+    margin-bottom:5rem;
+    text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
+    
+  }
+
+  .crousel-card p{
+    font-family: "Rancho";
+    font-weight:500;
+    font-size:3rem;
+    color:#334257;
+    width:50%;
+    margin-left:30rem;
     margin-bottom:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
   }
+
+  .crousel-card h1{
+    font-family: "Rancho";
+    font-weight:600;
+    color:#476072;
+    margin-bottom:2rem;
+    font-size:5rem;
+    text-shadow: -3px 5px 6px rgba(0,0,0,0.4);
+    letter-spacing:1rem;
+  }
+
+  @media (max-width:768px){
+    .crousel-card p,.p{
+      margin-left:1rem;
+      width:100%;
+    }
+  }
+
+  .swiper-container{
+    width:95vw;
+    margin-left:-1rem;
+    margin-bottom:1rem;
+  }
+  .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 20vw;
+  height: 50vh;
+  background:transparent;
+  margin-left:10px;
+  margin-bottom:2rem;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 250px;
+    height: auto;
+  }
+}
+
+
+.swiper-slide  .card{
+  display: block;
+  width: 100%;
+  
+  /* height: 100%; */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swiper-slide  .card:hover{
+  display: block;
+  width: 80%;
+  
+  /* height: 100%; */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  border-radius: 5px; 
+}
+
+.swiper-button-prev{
+   margin-left:-1rem;
+}
+.swiper-button-next{
+   margin-right:2rem
+}
+
+.card p{
+  margin-left:0;
+  font-size:1.5rem;
+  color:white;
+  width:100%;
+}
+
 `
 
-const CardWrapper =styled.div`
+const CardWrapper = styled.div`
   display:grid;
   grid-template-columns:repeat(3,auto)
+`
+const SlideWrapper = styled(CardWrapper)`
+  
+  .swiper-container {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  bottom: -16vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  padding-bottom: 3vw;
+}
+
 `
 export default Cards
