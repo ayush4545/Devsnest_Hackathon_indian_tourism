@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import logo from '../images/logo.png'
 function Header() {
     return (
         <Container>
              <Wrapper>
-                <a href=""><img src="https://cdn.discordapp.com/attachments/845771359643762770/866032368900243457/second.png"/></a>
+                <a href=""><img src={logo}/></a>
              </Wrapper>
              <LinksWrapper>
                   <a href="#home">HOME</a>
@@ -35,7 +36,7 @@ const Container=styled.div`
 const Wrapper=styled.div`
   width:10%;
   height:90%;
-  background-color:green;
+  
 
   img{
       width:100%;
