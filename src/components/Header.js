@@ -15,7 +15,9 @@ function Header() {
     return (
         <div className="Header-Container">
             <div className="logoWrapper">
+      
                 <a href="#home"><img src={logo} alt="logo"/></a>
+
                 <MenuIcon className="menu" style={{ fontSize: 40, color: 'white' }} onClick={classChanges} />
             </div>
             <div className={`linkWrapper ${classes}`}>
