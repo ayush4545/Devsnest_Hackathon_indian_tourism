@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-// import 'swiper/components/scrollbar/scrollbar.scss';
 import "swiper/components/effect-coverflow/effect-coverflow.min.css"
 
 
@@ -53,14 +52,14 @@ function Cards() {
           className="myswiper"
         >
           <SlideWrapper>
-          
-              {cities.map((city, index) => {
-                return ( <SwiperSlide>
-                                  <SliderCard key={index} img={city.image} city={city.city} history={city.history} />  
-                                  
-                         </SwiperSlide>
-                         )
-              })}
+
+            {cities.map((city, index) => {
+              return (<SwiperSlide>
+                <SliderCard key={index} img={city.image} city={city.city} history={city.history} />
+
+              </SwiperSlide>
+              )
+            })}
 
           </SlideWrapper>
         </Swiper>
@@ -125,9 +124,16 @@ padding:5rem;
   }
 
   @media (max-width:768px){
+    .h1{
+      font-size:4rem;
+    }
     .crousel-card p,.p{
       margin-left:1rem;
       width:100%;
+      font-size:2rem;
+    }
+    .crousel-card h1{
+      font-size:4rem;
     }
   }
 
@@ -146,12 +152,7 @@ padding:5rem;
   margin-bottom:2rem;
 }
 
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: 250px;
-    height: auto;
-  }
-}
+
 
 
 .swiper-slide  .card{
@@ -195,11 +196,27 @@ padding:5rem;
   width:100%;
 }
 
+@media (max-width: 768px) {
+  .swiper-container{
+    width:95vw;
+
+  }
+  .swiper-slide {
+    width: 10vw;
+    height:40vh;
+
+  }
+}
+
 `
 
 const CardWrapper = styled.div`
   display:grid;
-  grid-template-columns:repeat(3,auto)
+  grid-template-columns:repeat(3,auto);
+
+  @media (max-width:768px){
+    grid-template-columns:repeat(1,auto);
+  }
 `
 const SlideWrapper = styled(CardWrapper)`
   

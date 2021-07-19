@@ -38,3 +38,13 @@
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
     letter-spacing: 0.1rem;
 }
+
+
+@media (max-width:768px){
+    .about-container h1{
+        font-size:4rem;
+    }
+    .about-container p{  
+        font-size:2rem; 
+    }
+}
