@@ -104,8 +104,7 @@ justify-content:space-around;
   height:10vh;
   background-color:blue;
 
-}
-.mainContent{
+  .mainContent{
      
      margin-top:-12rem;
  }
@@ -156,5 +155,8 @@ justify-content:space-around;
     font-size:1rem; 
     margin:0;
 }
+
+}
+
 `
 export default Footer
