@@ -1,4 +1,7 @@
 
+.card-wrapper{
+    perspective: 2000;
+}
 .mem-card{
     display: flex;
     flex-direction: column;
@@ -9,7 +12,14 @@
     width: 290px;
     border-radius: 35px;
     margin: 20px;
-    background-color: rgb(198, 231, 227);
+    background: rgba( 255, 255, 255, 0.30 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 13.0px );
+-webkit-backdrop-filter: blur( 13.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    
 }
 
 .mem-card img{
@@ -18,12 +28,23 @@
 }
 
 .mem-card h2{
-    font-family: 'Exo 2', sans-serif;
     font-size: 30px;
     text-align: center;
+    font-family: "Rancho";
+    font-weight:600;
+    color:#476072;
+    letter-spacing: 0.2rem;
 }
 
 .links{
     display: flex;
     align-items: center;
+}
+
+.link a {
+    color:#476072;
+} 
+.links a:nth-child(2){
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

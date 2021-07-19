@@ -26,7 +26,7 @@ function Cards() {
       <p className="p">India is a home to the finest architectural heritage, serene ghats, spectacular landscapes and largest tiger reserve</p>
       <CardWrapper>
         {cardCitie.map((city, index) => {
-          return <Card key={index} img={city.image} city={city.city} history={city.history} />
+          return <Card key={index} img={city.image} city={city.city} history={city.history} short={city.short} />
         })}
       </CardWrapper>
 
