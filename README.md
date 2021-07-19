@@ -6,7 +6,7 @@
 
 
 Stack India Travel is dedicated to Travel.This site is focused on Tourist Spots in India.
-This build was Done by out whole team for 48hours Hackathon
+This build was Done by our whole team in 48hours for Hackathon.
 
 ## Features
 
