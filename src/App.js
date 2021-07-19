@@ -4,6 +4,7 @@ import Typical from 'react-typical'
 import Cards from './components/Cards';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+import Aboutus from './components/Aboutus';
 import Fade from 'react-reveal/Fade';
 // import Aos from 'aos';
 // import "aos/dist/aos.css"
@@ -31,6 +32,7 @@ function App() {
          <Cards />
          
          <Fade bottom>
+              <Aboutus/>
               <ContactUs />
               <Footer />
          </Fade>
