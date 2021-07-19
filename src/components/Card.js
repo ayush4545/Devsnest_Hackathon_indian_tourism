@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import "./css/Card.css"
-// import Tilt from 'react-vanilla-tilt'
 import Tilt from 'react-parallax-tilt';
-import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
-import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
 function Card({ img, city, history,short }) {
     const [classNames,setClassName]=useState('hide')
     
@@ -25,7 +22,6 @@ function Card({ img, city, history,short }) {
                 <div className={`popup-screen ${classNames}`} onClick={(e)=>{
                      e.stopPropagation()
                     setClassName('hide')}}>
-                {/* <CancelOutlinedIcon  className="cancel" style={{ fontSize: 50 }} /> */}
                  <div className="card-popup">
                      <img src={img} alt={city}/>
                      <div className="info">

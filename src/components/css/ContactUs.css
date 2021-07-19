@@ -194,3 +194,69 @@ margin-top:0.5rem;
    border:1px solid white;
    transform: scale(0.9);
 }
+
+
+@media (max-width:768px){
+    .Container h1{
+        font-family: "Rancho";
+        font-weight:600;
+        color:#476072;
+        margin-bottom:2rem;
+        font-size:4rem;
+        text-shadow: -3px 5px 6px rgba(0,0,0,0.4);
+        letter-spacing:1rem;
+     
+    }
+    
+    .Container p{
+        font-family: "Rancho";
+        font-weight:500;
+        font-size:1.5rem;
+        color:#334257;
+        /* width:50%; */
+        margin-left:13rem;
+        margin-bottom:5rem;
+        text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
+        letter-spacing: 0.3rem;
+        
+    }
+    .form h2{
+        font-size: 2.5rem;
+       margin-top: 1rem;
+    }
+    
+    .connect .office h2{
+        font-size: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .connect .office span{
+      font-size: 1.5rem;
+    }
+    
+
+    .connect .office .address{
+        font-size:1.5rem ;
+        margin-top: 1rem;
+    }
+    
+    .connect .icons h2{
+        font-size: 2.5rem;
+        margin-top: -1rem;
+    }
+    
+.form div{
+
+    width:30vw;
+    height:4vh;
+    margin-top: 2rem;
+    
+}
+.btn{
+    padding:0.3rem 0.8rem;
+    font-size: 1.5rem;
+
+}
+
+
+}

@@ -7,39 +7,36 @@ import Footer from './components/Footer';
 import Aboutus from './components/Aboutus';
 import Fade from 'react-reveal/Fade';
 import bg from "./videos/bg.mp4"
-import { useEffect } from 'react';
 function App() {
-  // useEffect(()=>{
-  //   Aos.init({})
-  // },[])
+ 
   return (
     <>
-    <div className="app">
+      <div className="app">
         <Header />
-              <video autoPlay muted loop>
-                <source src={bg} type="video/mp4"/>
-              </video>
+        <video autoPlay muted loop>
+          <source src={bg} type="video/mp4" />
+        </video>
         <div className="homePageText" id="home">
-              
-               <h1>Namaste India</h1>
-               <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
-               <h4>Visit
-                 <Typical 
-                  steps={["Agra",1000,"Jaipur",1000,"Kerala",1000,"Kolkata",1000]}
-                  loop={Infinity}
-                  className="typist"
-                  />
-               </h4>
-              
+
+          <h1>Namaste India</h1>
+          <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
+          <h4>Visit
+            <Typical
+              steps={["Agra", 1000, "Jaipur", 1000, "Kerala", 1000, "Kolkata", 1000]}
+              loop={Infinity}
+              className="typist"
+            />
+          </h4>
+
         </div>
-    </div>
-         <Cards />
-         
-         <Fade bottom>
-              <ContactUs />
-              <Aboutus/>
-         </Fade>
-              <Footer />
+      </div>
+      <Cards />
+
+      <Fade bottom>
+        <ContactUs />
+        <Aboutus />
+      </Fade>
+      <Footer />
 
     </>
   );

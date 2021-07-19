@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import Card from "./Card"
 import styled from 'styled-components'
 import data from '../data'
@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-// import 'swiper/components/scrollbar/scrollbar.scss';
 import "swiper/components/effect-coverflow/effect-coverflow.min.css"
 
 
@@ -53,14 +52,14 @@ function Cards() {
           className="myswiper"
         >
           <SlideWrapper>
-          
-              {cities.map((city, index) => {
-                return ( <SwiperSlide>
-                                  <SliderCard key={index} img={city.image} city={city.city} history={city.history} />  
-                                  
-                         </SwiperSlide>
-                         )
-              })}
+
+            {cities.map((city, index) => {
+              return (<SwiperSlide>
+                <SliderCard key={index} img={city.image} city={city.city} history={city.history} />
+
+              </SwiperSlide>
+              )
+            })}
 
           </SlideWrapper>
         </Swiper>
@@ -80,6 +79,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 background-attachment: fixed;
 background-size: cover;
 padding:5rem;
+
 .h1{
     font-family: "Rancho";
     font-weight:600;
@@ -101,6 +101,7 @@ padding:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
     
   }
+
   .crousel-card p{
     font-family: "Rancho";
     font-weight:500;
@@ -111,6 +112,7 @@ padding:5rem;
     margin-bottom:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
   }
+
   .crousel-card h1{
     font-family: "Rancho";
     font-weight:600;
@@ -120,12 +122,21 @@ padding:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.4);
     letter-spacing:1rem;
   }
+
   @media (max-width:768px){
+    .h1{
+      font-size:4rem;
+    }
     .crousel-card p,.p{
       margin-left:1rem;
       width:100%;
+      font-size:2rem;
+    }
+    .crousel-card h1{
+      font-size:4rem;
     }
   }
+
   .swiper-container{
     width:95vw;
     margin-left:-1rem;
@@ -140,12 +151,10 @@ padding:5rem;
   margin-left:10px;
   margin-bottom:2rem;
 }
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: 250px;
-    height: auto;
-  }
-}
+
+
+
+
 .swiper-slide  .card{
   display: block;
   width: 100%;
@@ -162,31 +171,52 @@ padding:5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .swiper-pagination-fraction {
   bottom: 0;
 }
+
 .swiper-pagination-bullet {
   width: 25px;
   height: 5px;
   border-radius: 5px; 
 }
+
 .swiper-button-prev{
    margin-left:-1rem;
 }
 .swiper-button-next{
    margin-right:2rem
 }
+
 .card p{
   margin-left:0;
   font-size:1.5rem;
   color:white;
   width:100%;
 }
+
+@media (max-width: 768px) {
+  .swiper-container{
+    width:95vw;
+
+  }
+  .swiper-slide {
+    width: 10vw;
+    height:40vh;
+
+  }
+}
+
 `
 
 const CardWrapper = styled.div`
   display:grid;
-  grid-template-columns:repeat(3,auto)
+  grid-template-columns:repeat(3,auto);
+
+  @media (max-width:768px){
+    grid-template-columns:repeat(1,auto);
+  }
 `
 const SlideWrapper = styled(CardWrapper)`
   
@@ -200,5 +230,6 @@ const SlideWrapper = styled(CardWrapper)`
   z-index: 2;
   padding-bottom: 3vw;
 }
+
 `
 export default Cards
