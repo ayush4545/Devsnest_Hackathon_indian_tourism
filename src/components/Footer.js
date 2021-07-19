@@ -92,6 +92,7 @@ justify-content:space-around;
     font-family: "Rancho";
     font-weight:500;
     color:white;
+    margin-left:0rem;
     margin-bottom:1rem;
     font-size:1.5rem;
     /* text-shadow: -3px 5px 6px rgba(0,0,0,0.4); */

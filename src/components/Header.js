@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MenuIcon from '@material-ui/icons/Menu';
 import "./css/Header.css"
+import logo from '../images/logo.png'
 function Header() {
     const [classes, setClasses] = useState(null)
     const classChanges = () => {
@@ -14,7 +15,9 @@ function Header() {
     return (
         <div className="Header-Container">
             <div className="logoWrapper">
-                <a href="#home"><img src="https://cdn.discordapp.com/attachments/845771359643762770/866032368900243457/second.png" /></a>
+      
+                <a href="#home"><img src={logo} alt="logo"/></a>
+
                 <MenuIcon className="menu" style={{ fontSize: 40, color: 'white' }} onClick={classChanges} />
             </div>
             <div className={`linkWrapper ${classes}`}>
