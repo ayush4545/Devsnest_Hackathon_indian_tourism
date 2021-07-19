@@ -116,7 +116,7 @@
     position: relative;
     height: 60%;
     width: 70vw;
-    margin-top: 10%;
+    margin-top: 15%;
     background-color:rgba(255,255,255,0.2);
     border-bottom: 5px solid white;
     border-top: 5px solid white ;
@@ -177,7 +177,7 @@
 .cancel{
     position: absolute;
     color:white;
-    top:5%; 
+    top:12%; 
     cursor: pointer;
     transform: scale(1);
     animation: cancel 0.3s linear infinite;

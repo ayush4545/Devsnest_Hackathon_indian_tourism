@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
 import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
-function Card({ img, city, history }) {
+function Card({ img, city, history,short }) {
     const [classNames,setClassName]=useState('hide')
     
     return (
@@ -15,15 +15,17 @@ function Card({ img, city, history }) {
                     <img src={img} alt={city} />
                     <div className="info">
                         <h3>{city}</h3>
-                        <p>{history}.</p>
+                        <p>{short}</p>
                         <button className="button" onClick={()=>setClassName('show')}>Read More</button>
                     </div>
                 </div>
             </Tilt>
 
             
-                <div className={`popup-screen ${classNames}`}>
-                <CancelOutlinedIcon  className="cancel" style={{ fontSize: 50 }} onClick={()=>{setClassName('hide')}}/>
+                <div className={`popup-screen ${classNames}`} onClick={(e)=>{
+                     e.stopPropagation()
+                    setClassName('hide')}}>
+                {/* <CancelOutlinedIcon  className="cancel" style={{ fontSize: 50 }} /> */}
                  <div className="card-popup">
                      <img src={img} alt={city}/>
                      <div className="info">

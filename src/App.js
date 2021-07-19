@@ -6,8 +6,7 @@ import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Aboutus from './components/Aboutus';
 import Fade from 'react-reveal/Fade';
-// import Aos from 'aos';
-// import "aos/dist/aos.css"
+import bg from "./videos/bg.mp4"
 import { useEffect } from 'react';
 function App() {
   // useEffect(()=>{
@@ -17,7 +16,11 @@ function App() {
     <>
     <div className="app">
         <Header />
+              <video autoPlay muted loop>
+                <source src={bg} type="video/mp4"/>
+              </video>
         <div className="homePageText" id="home">
+              
                <h1>Namaste India</h1>
                <h3>The traveler sees what he sees, the tourist sees what he has come to see</h3>
                <h4>Visit
@@ -27,15 +30,16 @@ function App() {
                   className="typist"
                   />
                </h4>
+              
         </div>
     </div>
          <Cards />
          
          <Fade bottom>
-              <Aboutus/>
               <ContactUs />
-              <Footer />
+              <Aboutus/>
          </Fade>
+              <Footer />
 
     </>
   );

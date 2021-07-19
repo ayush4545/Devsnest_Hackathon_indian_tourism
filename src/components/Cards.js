@@ -26,7 +26,7 @@ function Cards() {
       <p className="p">India is a home to the finest architectural heritage, serene ghats, spectacular landscapes and largest tiger reserve</p>
       <CardWrapper>
         {cardCitie.map((city, index) => {
-          return <Card key={index} img={city.image} city={city.city} history={city.history} />
+          return <Card key={index} img={city.image} city={city.city} history={city.history} short={city.short} />
         })}
       </CardWrapper>
 
@@ -80,7 +80,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 background-attachment: fixed;
 background-size: cover;
 padding:5rem;
-
 .h1{
     font-family: "Rancho";
     font-weight:600;
@@ -102,7 +101,6 @@ padding:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
     
   }
-
   .crousel-card p{
     font-family: "Rancho";
     font-weight:500;
@@ -113,7 +111,6 @@ padding:5rem;
     margin-bottom:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.6);
   }
-
   .crousel-card h1{
     font-family: "Rancho";
     font-weight:600;
@@ -123,14 +120,12 @@ padding:5rem;
     text-shadow: -3px 5px 6px rgba(0,0,0,0.4);
     letter-spacing:1rem;
   }
-
   @media (max-width:768px){
     .crousel-card p,.p{
       margin-left:1rem;
       width:100%;
     }
   }
-
   .swiper-container{
     width:95vw;
     margin-left:-1rem;
@@ -145,15 +140,12 @@ padding:5rem;
   margin-left:10px;
   margin-bottom:2rem;
 }
-
 @media (max-width: 768px) {
   .swiper-slide {
     width: 250px;
     height: auto;
   }
 }
-
-
 .swiper-slide  .card{
   display: block;
   width: 100%;
@@ -170,31 +162,26 @@ padding:5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .swiper-pagination-fraction {
   bottom: 0;
 }
-
 .swiper-pagination-bullet {
   width: 25px;
   height: 5px;
   border-radius: 5px; 
 }
-
 .swiper-button-prev{
    margin-left:-1rem;
 }
 .swiper-button-next{
    margin-right:2rem
 }
-
 .card p{
   margin-left:0;
   font-size:1.5rem;
   color:white;
   width:100%;
 }
-
 `
 
 const CardWrapper = styled.div`
@@ -213,6 +200,5 @@ const SlideWrapper = styled(CardWrapper)`
   z-index: 2;
   padding-bottom: 3vw;
 }
-
 `
 export default Cards
